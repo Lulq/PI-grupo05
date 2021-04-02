@@ -27,7 +27,7 @@ const adicionarUsuario = (novoUsuario) => {
 };
 
 const adicionarLivro = (novoLivro) => {
-    db.livro.push(novoLivro);
+    db.livros.push(novoLivro);
     atualizarBanco();
 };
 
@@ -36,9 +36,18 @@ const listarLivros = () => {
 
 }
 
-adicionarUsuario({
-    "nome" : "Luiz",
-    "Idade": "34",
-    "Gênero Favorito" : "Ficção Científica"
+// adicionarUsuario({
+//     "nome" : "Luiz",
+//     "Idade": "34",
+//     "Gênero Favorito" : "Ficção Científica"
+    
+// });
+
+adicionarLivro({
+    "nome" : "O mundo de Sofia",
+    "autor": "Jostein Gaarder",
+    "genero" : "Romance",
+    "sub-genero": "Filosofia",
+    "ano" : 1991
     
 });
