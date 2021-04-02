@@ -44,10 +44,10 @@ const listarLivros = () => {
 // });
 
 adicionarLivro({
-    "nome" : "O mundo de Sofia",
-    "autor": "Jostein Gaarder",
+    "nome" : "cem anos de solidão",
+    "autor": "Gabriel García Marquez",
     "genero" : "Romance",
-    "sub-genero": "Filosofia",
+    "sub-genero": "Realismo Fantástico",
     "ano" : 1991
     
 });
