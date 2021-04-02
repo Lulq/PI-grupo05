@@ -21,12 +21,12 @@ const atualizarBanco = () => {
     fs.writeFileSync('db.json', atualizacao, 'utf-8')
 };
 
-const adicionarUsuario (novoUsuario) => {
+const adicionarUsuario = (novoUsuario) => {
     db.users.push(novoUsuario);
     atualizarBanco();
 };
 
-const adicionarLivro (novoLivro) => {
+const adicionarLivro = (novoLivro) => {
     db.livro.push(novoLivro);
     atualizarBanco();
 };
@@ -35,3 +35,10 @@ const listarLivros = () => {
     //lista todos os livros cadastrados
 
 }
+
+adicionarUsuario({
+    "nome" : "Luiz",
+    "Idade": "34",
+    "Gênero Favorito" : "Ficção Científica"
+    
+});
