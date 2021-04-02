@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "nome": "Luiz",
+      "Idade": "34",
+      "Gênero Favorito": "Ficção Científica"
+    }
+  ],
+  "livros": []
+}
