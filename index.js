@@ -3,22 +3,42 @@ var moment = require("moment");
 let fs = require('fs');
 const { min } = require("moment"); // ver se precisa mesmo
 
-let db = fs.readFileSync('./db-livros.json'); // lê um arquivo json que contem informações sobre os livros cadastrados
 
-db = JSON.parse(db);
+let db = fs.readFileSync('./db.json'); // Lê um json.
+db = JSON.parse(db); // Converse o json em objeto JS
 
+//função para retornar a data e hora
 const dataAgora = () => {
     let data = moment().format("L - LTS")
     return data
 };
 
+//função que atualiza ambos os bancos de dados
 const atualizarBanco = () => {
     //conversão do objeto JS para JSON
-    let livrosAtualizados = JSON.stringify(db, null, 2);
+    let atualizacao = JSON.stringify(db, null, 2);
     // atualização do arquivo JSON do banco de dados
-    fs.writeFileSync('db-pets.json', livrosAtualizados, 'utf-8') // os parâmetros são o arquivo onde vai ser salvo, o que vai ser salvo nele, e a codificação do texto
+    fs.writeFileSync('db.json', atualizacao, 'utf-8')
+};
+
+const adicionarUsuario = (novoUsuario) => {
+    db.users.push(novoUsuario);
+    atualizarBanco();
+};
+
+const adicionarLivro = (novoLivro) => {
+    db.livro.push(novoLivro);
+    atualizarBanco();
 };
 
 const listarLivros = () => {
     //lista todos os livros cadastrados
+
 }
+
+adicionarUsuario({
+    "nome" : "Luiz",
+    "Idade": "34",
+    "Gênero Favorito" : "Ficção Científica"
+    
+});
