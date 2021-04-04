@@ -1,7 +1,6 @@
 {
   "name": "pi",
   "version": "1.0.0",
-  "description": "",
   "main": "start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +12,14 @@
     "moment": "^2.29.1",
     "nodemon": "^2.0.7",
     "uuid": "^8.3.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lulq/PI-grupo05.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lulq/PI-grupo05/issues"
+  },
+  "homepage": "https://github.com/Lulq/PI-grupo05#readme",
+  "description": ""
 }

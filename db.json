@@ -2,8 +2,13 @@
   "users": [
     {
       "nome": "Luiz",
-      "Idade": "34",
-      "Gênero Favorito": "Ficção Científica"
+      "idade": 34,
+      "favorito": "Ficção Científica"
+    },
+    {
+      "nome": "Miguel",
+      "idade": 31,
+      "favorito": "Economia"
     }
   ],
   "livros": [
@@ -18,7 +23,7 @@
       "nome": "cem anos de solidão",
       "autor": "Gabriel García Marquez",
       "genero": "Romance",
-      "sub-genero": "Realismo Fantástico",
+      "subgenero": "Realismo Fantástico",
       "ano": 1991
     }
   ]

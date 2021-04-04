@@ -13,6 +13,7 @@ const dataAgora = () => {
     return data
 };
 
+
 //função que atualiza ambos os bancos de dados
 const atualizarBanco = () => {
     //conversão do objeto JS para JSON
@@ -26,15 +27,46 @@ const adicionarUsuario = (novoUsuario) => {
     atualizarBanco();
 };
 
+
 const adicionarLivro = (novoLivro) => {
     db.livros.push(novoLivro);
     atualizarBanco();
 };
 
 const listarLivros = () => {
+    db.livros.forEach((livro) => {
+        let {nome, autor, genero, subgenero, ano} = livro
+        console.log(`${nome}, ${autor}, ${genero}, ${subgenero}, ${ano}`)
+    })
     //lista todos os livros cadastrados
 
 }
+
+const listarUsuario = () => {
+    db.users.forEach((user) => {
+        let {nome, idade, favorito} = user
+        console.log(`${nome}, ${idade}, ${favorito}`)
+    })
+    //lista todos os livros cadastrados
+
+}
+
+listarUsuario();
+
+// listarLivros()
+
+
+// const listarPets2 = () => {
+//     petsJSON.pets.forEach((pet) => {
+//         let {nome,idade,tipo,raca,vacinado} = pet;
+//         console.log(`${nome}, ${idade} anos, ${tipo}, ${raca}, ${(vacinado) ? 'vacinado': 'não vacinado'}`);
+    
+//         pet.servicos.forEach((servico) => {
+//             let {data,tipo} = servico;
+//             console.log(`${data} - ${tipo}`);
+//         })
+//     })
+// }
 
 // adicionarUsuario({
 //     "nome" : "Luiz",
@@ -43,11 +75,11 @@ const listarLivros = () => {
     
 // });
 
-adicionarLivro({
-    "nome" : "cem anos de solidão",
-    "autor": "Gabriel García Marquez",
-    "genero" : "Romance",
-    "sub-genero": "Realismo Fantástico",
-    "ano" : 1991
+// adicionarLivro({
+//     "nome" : "cem anos de solidão",
+//     "autor": "Gabriel García Marquez",
+//     "genero" : "Romance",
+//     "sub-genero": "Realismo Fantástico",
+//     "ano" : 1991
     
-});
+// });
