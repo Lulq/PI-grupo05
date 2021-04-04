@@ -36,14 +36,23 @@ const viraApagina = {
 
     listarLivros : () => {
         //lista todos os livros cadastrados
-        console.log("Estes são os livros cadastrados:")
+        let textoListaLivros = "Estes são os livros cadastrados:\n\n"
         db.livros.forEach(livro => {
             let {titulo, autor, edicao, genero, editora} = livro;
-            console.log(`Livro: ${titulo}, Autor: ${autor}, ${edicao}ª edição, Gênero: ${genero}, editora: ${editora}`)
+            textoListaLivros += (`Livro: ${titulo}, \nAutor: ${autor}, \n${edicao}ª edição, \nGênero: ${genero}, \neditora: ${editora}\n\n`)
         })
-
+        return textoListaLivros;
     },
 
+    listarUsuarios : () => {
+        //lista todos os usuários cadastrados.
+        let textoListaUsuarios = "Aqui estão os usuários cadastrados no portal:\n"
+        db.users.forEach(user => {
+            let {nome, cidade, estado, genero_favorito } = user;
+            textoListaUsuarios += (`${nome},\n${cidade}-${estado},\nGosta de ${genero_favorito}.\n\n`)
+        })
+        return textoListaUsuarios;
+    },
 
     filtrarGenero : genLivro => {
         let filtrados = db.livros.filter(livro => livro.genero === genLivro);
