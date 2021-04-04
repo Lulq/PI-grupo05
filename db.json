@@ -2,24 +2,46 @@
   "users": [
     {
       "nome": "Luiz",
-      "Idade": "34",
-      "Gênero Favorito": "Ficção Científica"
+      "idade": 34,
+      "genero_favorito": "Ficção Científica",
+      "estado": "PE",
+      "cidade": "Timbaúba"
+    },
+    {
+      "nome": "Ragnar",
+      "idade": 42,
+      "genero_favorito": "Guerra",
+      "estado": "DE",
+      "cidade": "Kattegat"
     }
   ],
   "livros": [
     {
-      "nome": "O mundo de Sofia",
+      "titulo": "O mundo de Sofia",
       "autor": "Jostein Gaarder",
       "genero": "Romance",
-      "sub-genero": "Filosofia",
-      "ano": 1991
+      "sub_genero": "Filosofia",
+      "edicao": 1,
+      "ano": 1991,
+      "editora": "AvaLivros"
     },
     {
-      "nome": "cem anos de solidão",
+      "titulo": "Cem anos de solidão",
       "autor": "Gabriel García Marquez",
       "genero": "Romance",
-      "sub-genero": "Realismo Fantástico",
-      "ano": 1991
+      "sub_genero": "Realismo Fantástico",
+      "edicao": 1,
+      "ano": 1967,
+      "editora": "AvaLivros"
+    },
+    {
+      "titulo": "Pai Rico, Pai Pobre",
+      "autor": "Robert Kiyosaki",
+      "genero": "Finança pessoais",
+      "sub_genero": "Não ficção",
+      "edicao": 4,
+      "ano": 1997,
+      "editora": "AvaLivros"
     }
   ]
 }
