@@ -3,23 +3,30 @@
     {
       "nome": "Luiz",
       "Idade": "34",
-      "Gênero Favorito": "Ficção Científica"
+      "Gênero Favorito": "Ficção Científica",
+      "estado": "PE",
+      "cidade":"Timbaúba"
+      
     }
   ],
   "livros": [
     {
-      "nome": "O mundo de Sofia",
+      "titulo": "O mundo de Sofia",
       "autor": "Jostein Gaarder",
       "genero": "Romance",
       "sub-genero": "Filosofia",
-      "ano": 1991
+      "edicao": 1,
+      "ano": 1991,
+      "editora":"AvaLivros"
     },
     {
-      "nome": "cem anos de solidão",
+      "titulo": "Cem anos de solidão",
       "autor": "Gabriel García Marquez",
       "genero": "Romance",
       "sub-genero": "Realismo Fantástico",
-      "ano": 1991
+      "edicao": 1,
+      "ano": 1967,
+      "editora": "AvaLivros"
     }
   ]
 }

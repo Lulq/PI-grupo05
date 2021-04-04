@@ -33,21 +33,33 @@ const adicionarLivro = (novoLivro) => {
 
 const listarLivros = () => {
     //lista todos os livros cadastrados
+    console.log("Estes são os livros cadastrados:")
+    db.livros.forEach(livro => {
+        let {titulo, autor, edicao, genero, editora} = livro;
+        console.log(`Livro: ${titulo}, Autor: ${autor}, ${edicao}ª edição, Gênero: ${genero}, editora: ${editora}`)
+    })
 
+}
+listarLivros()
+
+const filtrarGenero = genLivro => {
+    // pra fazer
 }
 
 // adicionarUsuario({
 //     "nome" : "Luiz",
-//     "Idade": "34",
-//     "Gênero Favorito" : "Ficção Científica"
-    
+//     "idade": "34",
+//     "genero favorito" : "Ficção Científica",
+//     "estado" : "Pernambuco",
+//     "cidade" : "Timbaúba"     
 // });
 
-adicionarLivro({
-    "nome" : "cem anos de solidão",
-    "autor": "Gabriel García Marquez",
-    "genero" : "Romance",
-    "sub-genero": "Realismo Fantástico",
-    "ano" : 1991
+// adicionarLivro({
+//     "nome" : "cem anos de solidão",
+//     "autor": "Gabriel García Marquez",
+//     "genero" : "Romance",
+//     "sub-genero": "Realismo Fantástico",
+//     "edição" : 1,
+//     "ano" : 1967
     
-});
+// });
