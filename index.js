@@ -1,4 +1,4 @@
-const nomeSite = "A definir"
+const nomeSite = "Vira a Página"
 var moment = require("moment");
 let fs = require('fs');
 const { min } = require("moment"); // ver se precisa mesmo
@@ -44,8 +44,14 @@ listarLivros()
 
 const filtrarGenero = genLivro => {
     // pra fazer
+    let filtrados = db.livros.filter(livro => livro.genero === genLivro);
+    console.log(`Aqui estão todos os livros do gênero ${genLivro}:`);
+    filtrados.forEach(filtrado => {
+        console.log(filtrado.titulo);
+    });
 }
 
+filtrarGenero("Romance");
 // adicionarUsuario({
 //     "nome" : "Luiz",
 //     "idade": "34",
