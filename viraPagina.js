@@ -1,5 +1,5 @@
 // Módulo virapagina
-const nomeSite = "Vira a Página"
+const nomeSite = "ViraPágina"
 var moment = require("moment");
 let fs = require('fs');
 const { min } = require("moment"); // ver se precisa mesmo
@@ -9,7 +9,7 @@ let db = fs.readFileSync('./db.json'); // Lê um json.
 db = JSON.parse(db); // Converse o json em objeto JS
 
 
-const viraApagina = {
+const viraPagina = {
     //função para retornar a data e hora
     dataAgora : () => {
         let data = moment().format("L - LTS")
@@ -26,12 +26,12 @@ const viraApagina = {
 
     adicionarUsuario : (novoUsuario) => {
         db.users.push(novoUsuario);
-        viraApagina.atualizarBanco();
+        viraPagina.atualizarBanco();
     },
 
     adicionarLivro : (novoLivro) => {
         db.livros.push(novoLivro);
-        viraApagina.atualizarBanco();
+        viraPagina.atualizarBanco();
     },
 
     listarLivros : () => {
@@ -46,7 +46,7 @@ const viraApagina = {
 
     listarUsuarios : () => {
         //lista todos os usuários cadastrados.
-        let textoListaUsuarios = "Aqui estão os usuários cadastrados no portal:\n"
+        let textoListaUsuarios = "Aqui estão os usuários cadastrados no portal:\n\n"
         db.users.forEach(user => {
             let {nome, cidade, estado, genero_favorito } = user;
             textoListaUsuarios += (`${nome},\n${cidade}-${estado},\nGosta de ${genero_favorito}.\n\n`)
@@ -63,4 +63,4 @@ const viraApagina = {
     }
 }
 
-module.exports = viraApagina;
+module.exports = viraPagina;

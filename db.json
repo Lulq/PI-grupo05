@@ -6,6 +6,13 @@
       "genero_favorito": "Ficção Científica",
       "estado": "PE",
       "cidade": "Timbaúba"
+    },
+    {
+      "nome": "Ragnar",
+      "idade": 42,
+      "genero_favorito": "Guerra",
+      "estado": "DE",
+      "cidade": "Kattegat"
     }
   ],
   "livros": [
